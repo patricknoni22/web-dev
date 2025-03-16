@@ -11,7 +11,54 @@
 *{
     box-sizing: border-box;
 }
+/* mobile menu */
+body{
+    --color1:#111010;
+    --color2:#fff;
+    font-family: "Inter", serif;
+    font-optical-sizing: auto;
+    font-weight: 400 600;
+    font-style: normal;
+}
+.nav-bar{
+    
+    background-color:blueviolet;
+   
+}
+.menu{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center ;
+    width: 80%;
+    height:100vh;
+    position:fixed;
+    top: 0;
+    right: -100% ;
+    z-index: 100;
+    background-color: var(--color1);
+    transition: all 0.2s ease-in-out;
 
+}
+
+.menu li {
+    margin-top: 40px;
+}
+.menu li a{
+    padding: 10px;
+    color: #fff;
+}
+.open-menu , .close-menu{
+    display: block;
+   
+    cursor: pointer;
+}
+.close-menu{
+    top: 20px  ;
+    right: 20px; 
+    transform: translateY(-50%);
+}
+#check:checked ~ .menu{right: 0;}
+/* mobile menu */
 header{
     background-color: rgb(65, 6, 175);
     height: 700px;
